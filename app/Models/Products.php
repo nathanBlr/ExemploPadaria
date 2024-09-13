@@ -15,6 +15,6 @@ class Products extends Model
     protected $table = "products";
     public function typeofproducts():BelongsTo
     {
-        return $this->belongsTo(TypesOfProducts::class);
+        return $this->belongsTo(TypesOfProducts::class, 'type_id');
     }
 }

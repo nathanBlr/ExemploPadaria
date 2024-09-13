@@ -8,64 +8,68 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>@yield('Title','Base')</title>
 </head>
-<body class="bg-[#ff9898] h-[400px]">
-    <header class="">
-        <nav class="bg-white border-gray-200 dark:bg-gray-900">
-            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+<body class="bg-[#ff9898] min-h-screen flex flex-col justify-between">
+    <!-- Header/NavBar -->
+    <header class="bg-white border-b border-gray-200 dark:bg-gray-900">
+        <nav class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+                <span class="text-2xl font-semibold text-gray-900 dark:text-white">Flowbite</span>
             </a>
-            <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-                <span class="sr-only">Open main menu</span>
-                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-                </svg>
-            </button>
-            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-                <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                <li>
-                    <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
-                </li>
-                <li>
-                    <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sobre</a>
-                </li>
-                <li>
-                    <a href="/admin" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Login</a>
-                </li>
-                <li>
-                    <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contatos</a>
-                </li>
-                <li>
-                    <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Localização</a>
-                </li>
+            <div class="hidden md:block">
+                <ul class="flex space-x-6 text-gray-900 dark:text-white">
+                    <li><a href="#" class="hover:text-blue-500">Home</a></li>
+                    <li><a href="#" class="hover:text-blue-500">Sobre</a></li>
+                    <li><a href="/admin" class="hover:text-blue-500">Login</a></li>
+                    <li><a href="#" class="hover:text-blue-500">Contatos</a></li>
+                    <li><a href="#" class="hover:text-blue-500">Localização</a></li>
                 </ul>
-            </div>
             </div>
         </nav>
     </header>
-    <main class="flex-grow">
-    @yield('main')
-    </main>
-    <footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800 ">
-        <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
-        </span>
-        <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
-            <li>
-                <a href="#" class="hover:underline me-4 md:me-6">About</a>
-            </li>
-            <li>
-                <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
-            </li>
-            <li>
-                <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
-            </li>
-            <li>
+
+    <!-- Hero Section -->
+    <section class="bg-cover bg-center h-[500px] flex items-center justify-center text-center bg-hero-pattern text-white">
+        <div class="bg-black bg-opacity-50 p-8 rounded-lg">
+            <h1 class="text-5xl font-bold mb-4">Welcome to Flowbite!</h1>
+            <p class="text-lg mb-6">Your one-stop shop for the finest products. Explore our exclusive collections today.</p>
+            <a href="#" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="py-12 bg-white">
+        <div class="max-w-screen-xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-10 text-gray-900">Our Exclusive Products</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                @foreach ($products as $product)
+                <a href="#" class="flex flex-col bg-white border border-gray-200 rounded-lg shadow hover:shadow-xl transition-shadow duration-300">
+                    <img class="object-cover w-full h-64 rounded-t-lg" src="{{ asset('storage/'.$product->image) }}" alt="">
+                    <div class="p-4">
+                        <h5 class="text-2xl font-bold text-gray-900 dark:text-white">{{ $product->typeofproducts->name }}</h5>
+                        <p class="text-gray-700 mt-2">{{ $product->description }}</p>
+                    </div>
+                    <div class="p-4 bg-gray-100">
+                        <p class="text-lg font-semibold text-gray-900">{{ $product->price }}$</p>
+                    </div>
+                </a>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-screen-xl mx-auto text-center">
+            <p class="text-lg">&copy; 2023 Flowbite™. All Rights Reserved.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="hover:underline">About</a>
+                <a href="#" class="hover:underline">Privacy Policy</a>
+                <a href="#" class="hover:underline">Licensing</a>
                 <a href="#" class="hover:underline">Contact</a>
-            </li>
-        </ul>
+            </div>
         </div>
     </footer>
 </body>
+
 </html>
